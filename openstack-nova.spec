@@ -47,7 +47,6 @@ toolkit (the same as Python itself) for code and user documentation.
 %package -n       python-nova
 Summary:          Nova Python libraries
 Group:            Applications/System
-
 Requires:         PyXML
 Requires:         curl
 # actually, libvirt requires ebtables for the stuff we want to do with it.
@@ -328,55 +327,53 @@ useradd -r -g nova -d %{sharedstatedir}/nova -s /sbin/nologin \
 exit 0
 
 %post ajax-console-proxy
-%fillup_and_insserv -f -y openstack-nova-ajax-console-proxy
+%_post_service openstack-nova-ajax-console-proxy
 
 %preun ajax-console-proxy
-%stop_on_removal openstack-nova-ajax-console-proxy
+%_preun_service openstack-nova-ajax-console-proxy
 
 %post api
-%fillup_and_insserv -f -y openstack-nova-api
+%_post_service openstack-nova-api
 
 %preun api
-%stop_on_removal openstack-nova-api
+%_preun_service openstack-nova-api
 
 %post compute
-%fillup_and_insserv -f -y openstack-nova-compute
+%_post_service openstack-nova-compute
 
 %preun compute
-%stop_on_removal openstack-nova-compute
+%_preun_service openstack-nova-compute
 
 %post instancemonitor
-%fillup_and_insserv -f -y openstack-nova-instancemonitor
+%_post_service openstack-nova-instancemonitor
 
 %preun instancemonitor
-%stop_on_removal openstack-nova-instancemonitor
+%_preun_service openstack-nova-instancemonitor
 
 %post network
-%fillup_and_insserv -f -y openstack-nova-network
+%_post_service openstack-nova-network
 
 %preun network
-%stop_on_removal openstack-nova-network
+%_preun_service openstack-nova-network
 
 %post objectstore
-%fillup_and_insserv -f -y openstack-nova-objectstore
+%_post_service openstack-nova-objectstore
 
 %preun objectstore
-%stop_on_removal openstack-nova-objectstore
+%_preun_service openstack-nova-objectstore
 
 %post scheduler
-%fillup_and_insserv -f -y openstack-nova-scheduler
+%_post_service openstack-nova-scheduler
 
 %preun scheduler
-%stop_on_removal openstack-nova-scheduler
+%_preun_service openstack-nova-scheduler
 
 %post volume
-%fillup_and_insserv -f -y openstack-nova-volume
+%_post_service openstack-nova-volume
 
 %preun volume
-%stop_on_removal openstack-nova-volume
+%_preun_service openstack-nova-volume
 
-%postun
-%insserv_cleanup
 
 %files
 %defattr(-,root,root,-)
