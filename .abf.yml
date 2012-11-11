@@ -1,0 +1,6 @@
+sources:
+  "nova-2011.2~bzr786.tar.bz2:"	ea5c4321c12fbb99ca2892e84c05c62571af3114
+  "nova.conf:"	28859de7cd1a6ce5ac8b427c868e61b706baeffc
+  "openstack-nova.init:"	e6a9021756a6dca3ea3750ca0c20306875e2c522
+  "openstack-nova.logrotate:"	fb412b04fbfb376027b82ed44d9edef749c0dd04
+  "openstack-nova-sudoers:"	a850f8b1eb74fa681feb04f0740eda62b5ddd3c2

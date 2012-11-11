@@ -1,0 +1,13 @@
+diff --git a/nova/utils.py b/nova/utils.py
+index 5f52252..d401260 100644
+--- a/nova/utils.py
++++ b/nova/utils.py
+@@ -161,7 +161,7 @@ def novadir():
+     return os.path.abspath(nova.__file__).split('nova/__init__.pyc')[0]
+ 
+ 
+-def default_flagfile(filename='nova.conf'):
++def default_flagfile(filename='/etc/nova/nova.conf'):
+     for arg in sys.argv:
+         if arg.find('flagfile') != -1:
+             break

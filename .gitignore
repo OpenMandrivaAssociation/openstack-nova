@@ -1,0 +1,5 @@
+nova-2011.2~bzr786.tar.bz2
+nova.conf
+openstack-nova.init
+openstack-nova.logrotate
+openstack-nova-sudoers
