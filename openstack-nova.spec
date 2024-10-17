@@ -7,7 +7,7 @@ Release:          %mkrel 1
 Summary:          OpenStack Compute (nova) current bzr snapshot
 Group:            Development/Other
 License:          ASL 2.0
-URL:              http://openstack.org/projects/compute/
+URL:              https://openstack.org/projects/compute/
 # download latest snapshot from
 # http://hudson.openstack.org/job/nova-tarball/lastSuccessfulBuild/artifact/dist/<tarball>
 # then bznew the tar.gz
